@@ -1,0 +1,23 @@
+{
+  "name": "day-maker-laterfork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwind build src/style.css -o public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsanIlva/daymaker-laterfork.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AsanIlva/daymaker-laterfork/issues"
+  },
+  "homepage": "https://github.com/AsanIlva/daymaker-laterfork#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.17"
+  }
+}
