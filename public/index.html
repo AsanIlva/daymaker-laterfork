@@ -4,14 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="news.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <title>AAA</title>
+    <title>News App</title>
   </head>
 
   <body>
+    <div class="app">
+      <div class="screen main-screen">
+        <div class="logo">NewsApp</div>
+        <div class="catagories"></div>
+        <div class="news-list"></div>
+      </div>
+      <div class="screen news-screen hidden">
+        <div class="header">
+          <div class="back-btn">&lt;</div>
+          <div class="title"></div>
+        </div>
+        <div class="news-frame">
+          <iframe id="news-frame"></iframe>
+        </div>
+      </div>
+    </div>
     <nav
       class="
         top-0
@@ -69,7 +86,7 @@
               py-1
               border border-solid border-transparent
               rounded
-              bg-transparent
+              bg-red
               block
               lg:hidden lg:outline-none
               focus:outline-none
@@ -79,222 +96,6 @@
           >
             <i class="text-white fas fa-bars"></i>
           </button>
-        </div>
-        <div
-          class="
-            lg:flex
-            flex-grow
-            items-center
-            bg-white
-            lg:bg-transparent
-            lg;shadow-none
-            hidden
-          "
-          id="example-collapse-navbar"
-        >
-          <ul class="flex flex-col lg:flex-row list-none mr-auto">
-            <li class="flex items-center">
-              <a
-                href="#"
-                class="
-                  lg:text-white lg:hover:text-gray-300
-                  text-gray-800
-                  px-3
-                  py-4
-                  lg:py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                "
-                ><i
-                  class="
-                    lg:text-gray-300
-                    text-gray-500
-                    fas
-                    fa-tablet
-                    text-lg
-                    leading-lg
-                    mr-2
-                  "
-                ></i
-                >XXX</a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                href="#"
-                class="
-                  lg:text-white lg:hover:text-gray-300
-                  text-gray-800
-                  px-3
-                  py-4
-                  lg:py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                "
-                ><i
-                  class="
-                    lg:text-gray-300
-                    text-gray-500
-                    fas
-                    fa-laptop
-                    text-lg
-                    leading-lg
-                    mr-2
-                  "
-                ></i
-                >XXX</a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                href="#team"
-                class="
-                  lg:text-white lg:hover:text-gray-300
-                  text-gray-800
-                  px-3
-                  py-4
-                  lg:py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                "
-                ><i
-                  class="
-                    lg:text-gray-300
-                    text-gray-500
-                    fas
-                    fa-users
-                    text-lg
-                    leading-lg
-                    mr-2
-                  "
-                ></i
-                >Team</a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                href="#contact"
-                class="
-                  lg:text-white lg:hover:text-gray-300
-                  text-gray-800
-                  px-3
-                  py-4
-                  lg:py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                "
-                ><i
-                  class="
-                    lg:text-gray-300
-                    text-gray-500
-                    fas
-                    fa-address-card
-                    text-lg
-                    leading-lg
-                    mr-2
-                  "
-                ></i
-                >Contact Us</a
-              >
-            </li>
-          </ul>
-          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-            <li class="flex items-center">
-              <a
-                href=""
-                class="
-                  lg:text-white lg:hover:text-gray-300
-                  text-gray-800
-                  px-3
-                  py-4
-                  lg:py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                "
-              >
-                <i
-                  class="
-                    lg:text-gray-300
-                    text-gray-500
-                    fab
-                    fa-facebook
-                    text-lg
-                    leading-lg
-                  "
-                ></i>
-                <span class="lg:hidden inline-block ml-2"></span>
-              </a>
-            </li>
-            <li class="flex items-center">
-              <a
-                href=""
-                class="
-                  lg:text-white lg:hover:text-gray-300
-                  text-gray-800
-                  px-3
-                  py-4
-                  lg:py-2
-                  flex
-                  items-center
-                  text-xs
-                  uppercase
-                  font-bold
-                "
-              >
-                <i
-                  class="
-                    lg:text-gray-300
-                    text-gray-500
-                    fab
-                    fa-twitter
-                    text-lg
-                    leading-lg
-                  "
-                ></i>
-                <span class="lg:hidden inline-block ml-2"></span>
-              </a>
-            </li>
-            <li class="flex items-center">
-              <button
-                class="
-                  bg-white
-                  text-gray-800
-                  active:bg-gray-100
-                  text-xs
-                  font-bold
-                  uppercase
-                  px-4
-                  py-2
-                  rounded
-                  shadow
-                  hover:shadow-md
-                  outline-none
-                  focus:outline-none
-                  lg:mr-1 lg:mb-0
-                  ml-3
-                  mb-3
-                "
-                type="button"
-              >
-                <i class="fas fa-arrow-circle-down mr-2"></i> XXX
-              </button>
-            </li>
-          </ul>
         </div>
       </div>
     </nav>
@@ -314,7 +115,7 @@
       >
         <div class="absolute w-full h-full">
           <video autoplay muted class="top-0 bg-center">
-            <source src="#" />
+            <source src="https://www.youtuberandom.com/?watch=8Nl8IgAOlEU" />
           </video>
         </div>
         <div class="container relative mx-auto hidden md:block">
@@ -327,7 +128,7 @@
           </div>
         </div>
       </div>
-      <section class="pb-20 mt-40 bg-gray-100" id="ipad">
+      <section class="pb-20 mt-60 bg-gray-100" id="ipad">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap">
             <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
@@ -343,34 +144,7 @@
                   shadow-lg
                   rounded-lg
                 "
-              >
-                <div class="px-4 py-5 flex-auto">
-                  <div
-                    class="
-                      text-white
-                      p-3
-                      text-center
-                      inline-flex
-                      items-center
-                      justify-center
-                      w-12
-                      h-12
-                      mb-5
-                      shadow-lg
-                      rounded-full
-                      bg-red-400
-                    "
-                  >
-                    <i class="fas fa-tablet"></i>
-                  </div>
-                  <h6 class="text-xl font-semibold">X</h6>
-                  <p class="mt-2 mb-4 text-gray-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Beatae illo voluptates facere hic impedit. Suscipit ad sed
-                    quaerat blanditiis doloremque.
-                  </p>
-                </div>
-              </div>
+              ></div>
             </div>
             <div class="w-full md:w-4/12 px-4 text-center">
               <div
@@ -386,49 +160,7 @@
                   rounded-lg
                 "
               >
-                <div class="px-4 py-5 flex-auto">
-                  <div
-                    class="
-                      text-white
-                      p-3
-                      text-center
-                      inline-flex
-                      items-center
-                      justify-center
-                      w-12
-                      h-12
-                      mb-5
-                      shadow-lg
-                      rounded-full
-                      bg-blue-400
-                    "
-                  >
-                    <i class="fas fa-laptop"></i>
-                  </div>
-                  <h6 class="text-xl font-semibold">X</h6>
-                  <p class="mt-2 mb-4 text-gray-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Beatae illo voluptates facere hic impedit. Suscipit ad sed
-                    quaerat blanditiis doloremque.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-              <div
-                class="
-                  relative
-                  flex flex-col
-                  min-w-0
-                  break-words
-                  bg-white
-                  w-full
-                  mb-8
-                  shadow-lg
-                  rounded-lg
-                "
-              >
-                <div class="px-4 py-5 flex-auto">
+                <div class="px-1 py-4 flex-auto">
                   <div
                     class="
                       text-white
@@ -445,17 +177,16 @@
                       bg-red-400
                     "
                   >
-                    <i class="fas fa-mobile"></i>
+                    <i class="fas fa-virus"></i>
                   </div>
-                  <h6 class="text-xl font-semibold">X</h6>
-                  <p class="mt-2 mb-4 text-gray-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Beatae illo voluptates facere hic impedit. Suscipit ad sed
-                    quaerat blanditiis doloremque.
+                  <h6 class="text-xl font-semibold">Coronavirus</h6>
+                  <p class="mt-2 mb-4 ml-2 mr-2 text-gray-600">
+                    Click here for latest Covid19 reports!
                   </p>
                 </div>
               </div>
             </div>
+            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"></div>
           </div>
           <div class="flex flex-wrap items-center mt-32">
             <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
@@ -1387,6 +1118,7 @@
       </div>
     </footer>
   </body>
+  <script src="script.js"></script>
   <script>
     function toggleNavbar(collapseId) {
       document.getElementById(collapseId).classList.toggle("hidden");
